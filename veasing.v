@@ -1,4 +1,4 @@
-module easing
+module veasing
 
 import math
 
