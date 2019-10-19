@@ -58,5 +58,5 @@ bounce_ease_in_out
 ```
 
 ## License
-[MIT](LICENSE)
+[GPL-3.0](LICENSE)
 
