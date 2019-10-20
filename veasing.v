@@ -2,11 +2,6 @@ module veasing
 
 import math
 
-const (
-  PI    = 3.141592653589
-  PI_2  = PI * 2.0
-)
-
 // linear_interpolation is a method of curve fitting using linear polynomials
 // to construct new data points within the range of a discrete set of known
 // data points
@@ -102,17 +97,17 @@ pub fn quintic_ease_in_out(p f64) f64 {
 
 // sine_ease_in accelerates using a sine formula
 pub fn sine_ease_in(p f64) f64 {
-  return math.sin((p - 1.0) * PI_2) + 1.0
+  return math.sin((p - 1.0) * math.pi * 2) + 1.0
 }
 
 // sine_ease_out decelerates using a sine formula
 pub fn sine_ease_out(p f64) f64 {
-  return math.sin(p * PI_2)
+  return math.sin(p * math.pi * 2)
 }
 
 // sine_ease_in_out accelerates and decelerates using a sine formula
 pub fn sine_ease_in_out(p f64) f64 {
-  return 0.5 * (1.0 - math.cos(p * PI))
+  return 0.5 * (1.0 - math.cos(p * math.pi))
 }
 
 // circular_ease_in accelerates using a circular function
@@ -161,13 +156,13 @@ pub fn exponential_ease_in_out(p f64) f64 {
 // elastic_ease_in resembles a spring oscillating back and forth, then
 // accelerates
 pub fn elastic_ease_in(p f64) f64 {
-  return math.sin(13.0 * PI_2 * p) * math.pow(2, 10.0 * (p - 1.0))
+  return math.sin(13.0 * math.pi * 2 * p) * math.pow(2, 10.0 * (p - 1.0))
 }
 
 // elastic_ease_out resembles a spring oscillating back and forth, then
 // decelerates
 pub fn elastic_ease_out(p f64) f64 {
-  return math.sin(-13.0 * PI_2 * (p + 1.0)) * math.pow(2, -10.0 * p) + 1.0
+  return math.sin(-13.0 * math.pi * 2 * (p + 1.0)) * math.pow(2, -10.0 * p) + 1.0
 }
 
 // elastic_ease_in_out resembles a spring oscillating back and forth before it
@@ -175,21 +170,21 @@ pub fn elastic_ease_out(p f64) f64 {
 // before it begins to decelerate afer a half
 pub fn elastic_ease_in_out(p f64) f64 {
   if(p < 0.5) {
-    return 0.5 * math.sin(13.0 * PI_2 * (2.0 * p)) * math.pow(2, 10.0 * ((2.0 * p) - 1.0))
+    return 0.5 * math.sin(13.0 * math.pi * 2 * (2.0 * p)) * math.pow(2, 10.0 * ((2.0 * p) - 1.0))
   } else {
-    return 0.5 * (math.sin(-13.0 * PI_2 * ((2.0 * p - 1.0) + 1.0)) * math.pow(2, -10.0 * (2.0 * p - 1.0)) + 2.0)
+    return 0.5 * (math.sin(-13.0 * math.pi * 2 * ((2.0 * p - 1.0) + 1.0)) * math.pow(2, -10.0 * (2.0 * p - 1.0)) + 2.0)
   }
 }
 
 // back_ease_in retracts the motion slightly before it begins to accelerate
 pub fn back_ease_in(p f64) f64 {
-  return p * p * p - p * math.sin(p * PI)
+  return p * p * p - p * math.sin(p * math.pi)
 }
 
 // back_ease_out retracts the motion slightly before it begins to decelerate
 pub fn back_ease_out(p f64) f64 {
   f := (1.0 - p)
-  return 1.0 - (f * f * f - f * math.sin(f * PI))
+  return 1.0 - (f * f * f - f * math.sin(f * math.pi))
 }
 
 // back_ease_in_out retracts the motion slightly before it begins to
@@ -198,10 +193,10 @@ pub fn back_ease_out(p f64) f64 {
 pub fn back_ease_in_out(p f64) f64 {
   if(p < 0.5) {
     f := 2.0 * p
-    return 0.5 * (f * f * f - f * math.sin(f * PI))
+    return 0.5 * (f * f * f - f * math.sin(f * math.pi))
   } else {
     f := (1.0 - (2.0 * p - 1.0 ))
-    return 0.5 * (1.0 - (f * f * f - f * math.sin(f * PI))) + 0.5
+    return 0.5 * (1.0 - (f * f * f - f * math.sin(f * math.pi))) + 0.5
   }
 }
 
