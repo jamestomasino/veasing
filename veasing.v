@@ -97,12 +97,12 @@ pub fn quintic_ease_in_out(p f64) f64 {
 
 // sine_ease_in accelerates using a sine formula
 pub fn sine_ease_in(p f64) f64 {
-  return math.sin((p - 1.0) * math.pi * 2) + 1.0
+  return math.sin((p - 1.0) * math.tau) + 1.0
 }
 
 // sine_ease_out decelerates using a sine formula
 pub fn sine_ease_out(p f64) f64 {
-  return math.sin(p * math.pi * 2)
+  return math.sin(p * math.tau)
 }
 
 // sine_ease_in_out accelerates and decelerates using a sine formula
@@ -156,13 +156,13 @@ pub fn exponential_ease_in_out(p f64) f64 {
 // elastic_ease_in resembles a spring oscillating back and forth, then
 // accelerates
 pub fn elastic_ease_in(p f64) f64 {
-  return math.sin(13.0 * math.pi * 2 * p) * math.pow(2, 10.0 * (p - 1.0))
+  return math.sin(13.0 * math.tau * p) * math.pow(2, 10.0 * (p - 1.0))
 }
 
 // elastic_ease_out resembles a spring oscillating back and forth, then
 // decelerates
 pub fn elastic_ease_out(p f64) f64 {
-  return math.sin(-13.0 * math.pi * 2 * (p + 1.0)) * math.pow(2, -10.0 * p) + 1.0
+  return math.sin(-13.0 * math.tau * (p + 1.0)) * math.pow(2, -10.0 * p) + 1.0
 }
 
 // elastic_ease_in_out resembles a spring oscillating back and forth before it
@@ -170,9 +170,9 @@ pub fn elastic_ease_out(p f64) f64 {
 // before it begins to decelerate afer a half
 pub fn elastic_ease_in_out(p f64) f64 {
   if(p < 0.5) {
-    return 0.5 * math.sin(13.0 * math.pi * 2 * (2.0 * p)) * math.pow(2, 10.0 * ((2.0 * p) - 1.0))
+    return 0.5 * math.sin(13.0 * math.tau * (2.0 * p)) * math.pow(2, 10.0 * ((2.0 * p) - 1.0))
   } else {
-    return 0.5 * (math.sin(-13.0 * math.pi * 2 * ((2.0 * p - 1.0) + 1.0)) * math.pow(2, -10.0 * (2.0 * p - 1.0)) + 2.0)
+    return 0.5 * (math.sin(-13.0 * math.tau * ((2.0 * p - 1.0) + 1.0)) * math.pow(2, -10.0 * (2.0 * p - 1.0)) + 2.0)
   }
 }
 
