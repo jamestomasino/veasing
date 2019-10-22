@@ -64,3 +64,21 @@ fn test_quartic_ease_in_out_under_0_5() {
 fn test_quartic_ease_in_out_over_0_5() {
   assert veasing.quartic_ease_in_out(0.6) == 0.795200 
 }
+
+fn test_quintic_ease_in() {
+  assert veasing.quintic_ease_in(4) == 1024  
+}
+
+fn test_quintic_ease_out() {
+  assert veasing.quintic_ease_out(4) == 244  
+}
+
+fn test_quintic_ease_in_out_under_0_5() {
+  assert veasing.quintic_ease_in_out(0.4) == 0.16384  
+}
+
+fn test_quintic_ease_in_out_over_0_5() { 
+  // FIXME
+  assert veasing.quintic_ease_in_out(0.6) == 0.83616
+}
+
