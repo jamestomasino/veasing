@@ -15,46 +15,56 @@ Based on the works of:
 ```shell
 v install jamestomasino.veasing
 ```
-... then in your v source:
+And then in your v source:
 
 ```v
-import jamestomasino.veasing as easing
+import jamestomasino.veasing as veasing
 
 ```
 The following easing methods are available:
 
-```
-linear_interpolation
-quadratic_ease_in
-quadratic_ease_out
-quadratic_ease_in_out
-cubic_ease_in
-cubic_ease_out
-cubic_ease_in_out
-quartic_ease_in
-quartic_ease_out
-quartic_ease_in_out
-quintic_ease_in
-quintic_ease_out
-quintic_ease_in_out
-sine_ease_in
-sine_ease_out
-sine_ease_in_out
-circular_ease_in
-circular_ease_out
-circular_ease_in_out
-exponential_ease_in
-exponential_ease_out
-exponential_ease_in_out
-elastic_ease_in
-elastic_ease_out
-elastic_ease_in_out
-back_ease_in
-back_ease_out
-back_ease_in_out
-bounce_ease_in
-bounce_ease_out
-bounce_ease_in_out
+``` v
+veasing.linear_interpolation(p f64) f64
+
+veasing.quadratic_ease_in(p f64) f64
+veasing.quadratic_ease_out(p f64) f64
+veasing.quadratic_ease_in_out(p f64) f64
+
+veasing.cubic_ease_in(p f64) f64
+veasing.cubic_ease_out(p f64) f64
+veasing.cubic_ease_in_out(p f64) f64
+
+veasing.quartic_ease_in(p f64) f64
+veasing.quartic_ease_out(p f64) f64
+veasing.quartic_ease_in_out(p f64) f64
+
+veasing.quintic_ease_in(p f64) f64
+veasing.quintic_ease_out(p f64) f64
+veasing.quintic_ease_in_out(p f64) f64
+
+veasing.sine_ease_in(p f64) f64
+veasing.sine_ease_out(p f64) f64
+veasing.sine_ease_in_out(p f64) f64
+
+veasing.circular_ease_in(p f64) f64
+veasing.circular_ease_out(p f64) f64
+veasing.circular_ease_in_out(p f64) f64
+
+veasing.exponential_ease_in(p f64) f64
+veasing.exponential_ease_out(p f64) f64
+veasing.exponential_ease_in_out(p f64) f64
+
+veasing.elastic_ease_in(p f64) f64
+veasing.elastic_ease_out(p f64) f64
+veasing.elastic_ease_in_out(p f64) f64
+
+veasing.back_ease_in(p f64) f64
+veasing.back_ease_out(p f64) f64
+veasing.back_ease_in_out(p f64) f64
+
+veasing.bounce_ease_in(p f64) f64
+veasing.bounce_ease_out(p f64) f64
+veasing.bounce_ease_in_out(p f64) f64
 ```
 
 ## License
