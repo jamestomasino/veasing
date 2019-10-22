@@ -58,11 +58,11 @@ fn test_quartic_ease_out() {
 }
 
 fn test_quartic_ease_in_out_under_0_5() {
-  assert veasing.quartic_ease_in_out(0.4) == 0.204800 
+  assert veasing.quartic_ease_in_out(0.4) == 0.2048 
 }
 
 fn test_quartic_ease_in_out_over_0_5() {
-  assert veasing.quartic_ease_in_out(0.6) == 0.795200 
+  assert veasing.quartic_ease_in_out(0.6) == 0.7952 
 }
 
 fn test_quintic_ease_in() {
