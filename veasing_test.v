@@ -48,6 +48,7 @@ fn test_cubic_ease_in_out_over_0_5() {
 
 //
 // Quadratic tests
+
 fn test_quartic_ease_in() {
   assert veasing.quartic_ease_in(3) == 81  
 }
@@ -64,6 +65,9 @@ fn test_quartic_ease_in_out_under_0_5() {
 fn test_quartic_ease_in_out_over_0_5() {
   assert veasing.quartic_ease_in_out(0.6) == 0.7952 
 }
+
+//
+// Quintic tests
 
 fn test_quintic_ease_in() {
   assert veasing.quintic_ease_in(4) == 1024  
