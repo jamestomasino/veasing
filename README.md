@@ -19,11 +19,11 @@ import jamestomasino.veasing as veasing
 Use the `animate` function to apply an easing function over a range of numbers
 ```v
 fn main () {
-  println(animate(veasing.bounce_ease_out, 0, 100, 100))
+  println(veasing.animate(veasing.bounce_ease_out, 0, 100, 100))
   //      easing function ^
-  //                          lower bounds ^
-  //                              upper bound ^
-  //       number of frames/length of return array ^
+  //                                  lower bounds ^
+  //                                     upper bounds ^
+  //               number of frames/length of return array ^
 }
 ```
 
