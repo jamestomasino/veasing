@@ -15,9 +15,21 @@ In your v source:
 import jamestomasino.veasing as veasing
 
 ```
+
+Use the `animate` function to apply an easing function over a range of numbers
+```v
+fn main () {
+  println(animate(veasing.bounce_ease_out, 0, 100, 100))
+  //      easing function ^
+  //                          lower bounds ^
+  //                              upper bound ^
+  //       number of frames/length of return array ^
+}
+```
+
 The following easing methods are available:
 
-``` v
+```v
 veasing.linear_interpolation(p f64) f64
 
 veasing.quadratic_ease_in(p f64) f64
