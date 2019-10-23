@@ -216,9 +216,10 @@ pub fn bounce_ease_in_out(p f64) f64 {
 
 // animate returns []f64 of length "frames" using the easing function provided with lower and upper bounds as "from" and "to"
 pub fn animate(func fn(f64) f64, from f64, to f64, frames int) []f64 {
+  len := int(math.max(frames, 0))
   mut t := f64(0.0)
-  dt := f64(1.0 / (frames - 1))
-  mut animation := [f64(0)].repeat(frames)
+  dt := f64(1.0 / (len - 1))
+  mut animation := [f64(0)].repeat(len)
   for i, _ in animation {
     animation[i] = from + func(t) * (to - from)
     t += dt
