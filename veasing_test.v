@@ -120,6 +120,31 @@ fn test_circular_ease_in_out_over_0_5() {
   assert compare(veasing.circular_ease_in_out(0.6), 0.80) 
 }
 
+//
+// Exponential tests
+fn test_exponential_ease_in() {
+  assert compare(veasing.exponential_ease_in(2), 1024)
+}
+
+fn test_exponential_ease_out() {
+  assert compare(veasing.exponential_ease_out(2), 0.999999) 
+}
+
+fn test_exponential_ease_in_out_for_0() {
+  assert compare(veasing.exponential_ease_in_out(0), 0) 
+}
+
+fn test_exponential_ease_in_out_for_1() {
+  assert compare(veasing.exponential_ease_in_out(1), 1) 
+}
+
+fn test_exponential_ease_in_out_under_0_5() {
+  assert compare(veasing.exponential_ease_in_out(0.4), 0.125000) 
+}
+
+fn test_exponential_ease_in_out_over_0_5() {
+  assert compare(veasing.exponential_ease_in_out(0.6), 0.875000) 
+}
 
 // Helper method for comparing floats
 fn compare(x f64, y f64) bool {
