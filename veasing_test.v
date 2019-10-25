@@ -205,6 +205,12 @@ fn test_bounce_ease_in_out() {
 // Helper method for comparing floats
 fn compare(x f64, y f64) bool {
   tolerance := 0.00001
+  
+  // Special case for zeroes
+  if x < tolerance && x > (-1.0 * tolerance) && y < tolerance && y > (-1.0 * tolerance) {
+    return true
+  }
+
   diff := math.abs(x - y)
   mean := math.abs(x + y) / 2.0
   if math.is_nan(diff / mean) {
