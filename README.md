@@ -7,7 +7,7 @@ This is a pure V module that provides easing function calculations.
 ### Install using vpkg
 
 ```shell
-vpkg get https://github.com/jamestomasino/veasing
+vpkg get veasing
 ```
 
 ### Install using vpm
