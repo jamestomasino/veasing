@@ -4,17 +4,48 @@ This is a pure V module that provides easing function calculations.
 
 ## Install
 
+### Install using vpkg
+
+```shell
+vpkg get https://github.com/jamestomasino/veasing
+```
+
+### Install using vpm
+
 ```shell
 v install jamestomasino.veasing
 ```
-## Usage
 
-In your v source:
+### Install using git
+
+```shell
+cd path/to/your/project
+git clone https://github.com/jamestomasino/veasing
+```
+
+### Install using git submodule
+
+```shell
+cd path/to/your/project
+git submodule add https://github.com/jamestomasino/veasing veasing && git submodule update --init --recursive
+```
+
+## Importing the module
+
+### For vpkg or git installation
+
+```v
+import veasing
+```
+
+### For vpm installation
 
 ```v
 import jamestomasino.veasing as veasing
 
 ```
+
+## Usage
 
 Use the `animate` function to apply an easing function over a range of numbers
 ```v
