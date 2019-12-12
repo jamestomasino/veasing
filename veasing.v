@@ -194,7 +194,7 @@ pub fn bounce_ease_in(p f64) f64 {
 
 // bounce_ease_out creates a bouncing effect, then decelerates
 pub fn bounce_ease_out(p f64) f64 {
-  if (p < 4 / 11.0) {
+  if (p < 4.0 / 11.0) {
     return (121.0 * p * p) / 16.0
   } else if (p < 8.0 / 11.0) {
     return (363.0 / 40.0 * p * p) - (99.0 / 10.0 * p) + 17.0 / 5.0

@@ -106,11 +106,11 @@ veasing.bounce_ease_in_out(p f64) f64
 
 ## Testing
 
-To run the tests you will need to do the following:
+To run the tests execute the following command from inside the cloned repo.
 
-1. Clone the repository somewhere
-2. Move to the parent folder of that cloned repository
-3. Run `v -stats test /cloned-folder-path`
+```v
+v -stats -user_mod_path $PWD/../ veasing_test.v
+```
 
 ## Credits
 
