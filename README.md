@@ -109,7 +109,7 @@ veasing.bounce_ease_in_out(p f64) f64
 To run the tests execute the following command from inside the cloned repo.
 
 ```v
-v -stats -user_mod_path $PWD/../ veasing_test.v
+v -stats veasing_test.v
 ```
 
 ## Credits
